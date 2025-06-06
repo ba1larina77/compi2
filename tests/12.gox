@@ -1,0 +1,15 @@
+//11. Programa con punteros/memoria (deref)
+var address int = 1000;
+var value int = 42;
+
+`address = value;  // Store value at memory address
+var retrieved int = `address;  // Retrieve value from memory
+`(address+1) = value+value;  // Store value at memory address
+var retrieved2 int = `(address+1);  // Retrieve value from memory
+print retrieved;  // Should print 42
+print retrieved2;  // Should print 84
+
+// Testing GROW operator ^
+const n = 100;         
+const base = ^(n + 1); // Memoria para n+1 posiciones
+print base;

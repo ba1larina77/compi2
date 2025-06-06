@@ -1,0 +1,12 @@
+//Variables basicas
+var x int = 10;
+var y int = 20;
+var sum int = x + y;    
+var diff int = x - y;   
+var prod int = x * y;   
+var div int = y / x;    
+
+print sum;   // Imprime: 30
+print diff;  // Imprime: -10
+print prod;  // Imprime: 200
+print div;   // Imprime: 2

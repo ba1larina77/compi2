@@ -1,0 +1,9 @@
+//6. Programa con caracteres y operaciones lógicas
+var letter char = 'U';
+var isVowel bool = false;
+
+if letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U' {
+    isVowel = true;
+}
+
+print isVowel;  // Should print true

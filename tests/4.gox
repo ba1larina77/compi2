@@ -1,0 +1,10 @@
+//4. Programa con bucles while
+var counter int = 1;
+var sum int = 0;
+
+while counter <= 5 {
+    sum = sum + counter;
+    counter = counter + 1;
+}
+
+print sum;  // Should print 15

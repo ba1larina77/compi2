@@ -1,0 +1,18 @@
+//9. Programa con break y continue
+var i int = 0;
+var evenSum int = 0;
+
+while i < 10 {
+    i = i + 1;
+    if i == 5 {
+        continue;  // Skip 5
+    }
+    if i == 8 {
+        break;     // Stop at 8
+    }
+    if i == 2 || i == 4 || i == 6 || i == 8 || i == 10 {
+        evenSum = evenSum + i;
+    }
+}
+
+print evenSum;  // Should print sum of even numbers: 2, 4, 6

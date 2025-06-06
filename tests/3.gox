@@ -1,0 +1,9 @@
+//3. Programa con condicionales simples
+var age int = 18;
+var hasLicense bool = true;
+
+if age >= 18 && hasLicense {
+    print 1;  // Can drive
+} else {
+    print 0;  // Cannot drive
+}

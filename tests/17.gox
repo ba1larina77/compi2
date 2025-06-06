@@ -1,0 +1,94 @@
+// test_imports.txt
+import func external_sort(array_ptr int, size int) int;
+import func memory_copy(src int, dest int, size int);
+
+const ARRAY_SIZE int = 5;
+var global_counter int = 0;
+
+func increment_global() {
+    global_counter = global_counter + 1;
+}
+
+func test_edge_cases() {
+    var negative int = -42;
+    var zero int = 0;
+    var hex_char char = '\x41';  // 'A' in hex
+    var escape_chars char;
+    
+    // Test negative numbers
+    print negative;
+    print -negative;  // Should be positive
+    
+    // Test zero comparisons
+    if zero == 0 {
+        print 'Z';
+    }
+    
+    // Test hex character
+    print hex_char;
+    
+    // Test various escape sequences
+    escape_chars = '\n';  // Won't print visibly but tests parsing
+    escape_chars = '\t';
+    escape_chars = '\\';
+    escape_chars = '\'';
+    print escape_chars;
+}
+
+func nested_loops_and_breaks() {
+    var i int = 0;
+    var j int;
+    var found bool = false;
+    
+    while i < 5 && !found {
+        j = 0;
+        while j < 5 {
+            if i * j == 6 {
+                found = true;
+                print i;
+                print j;
+                break;
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    
+    // Test continue - check if number is even without using %
+    i = 0;
+    while i < 10 {
+        i = i + 1;
+        if (i / 2) * 2 == i {  // Check if even: if i/2*2 equals i, then i is even
+            continue;
+        }
+        print i;  // Only odd numbers
+    }
+}
+
+func main() int {
+    var my_array int;
+    var i int;
+    
+    // Test global variable
+    increment_global();
+    increment_global();
+    print global_counter;  // Should be 2
+    
+    // Test imported function (would need implementation)
+    my_array = ^(ARRAY_SIZE * 4);
+    
+    // Fill array with test data
+    i = 0;
+    while i < ARRAY_SIZE {
+        `(my_array + (i * 4)) = ARRAY_SIZE - i;
+        i = i + 1;
+    }
+    
+    // Test edge cases
+    test_edge_cases();
+    
+    // Test complex control flow
+    nested_loops_and_breaks();
+    
+    return 0;
+}

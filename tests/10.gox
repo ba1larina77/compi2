@@ -1,0 +1,14 @@
+//10. Programa con funciones importadas
+import func sin(x float) float;
+import func cos(x float) float;
+
+const pi float = 3.14159;
+var angle float = pi / 4.0;  // 45 degrees
+
+var sinValue float = sin(angle);
+var cosValue float = cos(angle);
+
+print sinValue;
+print cosValue;
+print pi;
+print angle;

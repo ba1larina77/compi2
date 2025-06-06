@@ -1,0 +1,9 @@
+//8. Programa con operadores unarios
+var positive int = 10;
+var negative int = -positive;
+var notTrue bool = !true;
+var notFalse bool = !false;
+
+print negative;   // Should print -10
+print notTrue;    // Should print false
+print notFalse;   // Should print true

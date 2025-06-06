@@ -1,0 +1,43 @@
+// test_types.txt
+func calculate_circle_area(radius float) float {
+    const PI float = 3.14159;
+    return PI * radius * radius;
+}
+
+
+func string_like_operations() {
+    var message_ptr int;
+    var char_array char;
+    
+    // Simulate string operations using character array
+    message_ptr = ^20;  // Allocate 20 bytes
+    
+    // Store "HELLO" in memory
+    `message_ptr = 'H';
+    `(message_ptr + 1) = 'E';
+    `(message_ptr + 2) = 'L';
+    `(message_ptr + 3) = 'L';
+    `(message_ptr + 4) = 'O';
+    `(message_ptr + 5) = '\x00';  // Null terminator
+    
+    // Print the string
+    var i int = 0;
+    while `(message_ptr + i) != '\x00' {
+        print `(message_ptr + i);
+        i = i + 1;
+    }
+}
+
+func main() int {
+    var area float;
+    
+    // Test circle area calculation
+    area = calculate_circle_area(5.0);
+    print area;
+    
+    
+    // Test string-like operations
+    string_like_operations();
+    
+    return 0;
+}

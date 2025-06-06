@@ -1,0 +1,88 @@
+// test_math.txt
+func power(base int, exponent int) int {
+    if exponent == 0 {
+        return 1;
+    }
+    
+    var result int = 1;
+    var i int = 0;
+    
+    while i < exponent {
+        result = result * base;
+        i = i + 1;
+    }
+    
+    return result;
+}
+
+func factorial(n int) int {
+    if n <= 1 {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+func gcd(a int, b int) int {
+    while b != 0 {
+        if a > b {
+            a = a - b;
+        } else {
+            b = b - a;
+        }
+    }
+    return a;
+}
+
+func complex_calculation() float {
+    var result float = 0.0;
+    var i int = 1;
+    
+    // Calculate series: 1/1 + 1/2 + 1/3 + ... + 1/10
+    while i <= 10 {
+        result = result + (1.0 / float(i));
+        i = i + 1;
+    }
+    
+    return result;
+}
+
+func main() int {
+    var pow_result int;
+    var fact_result int;
+    var gcd_result int;
+    var series_result float;
+    
+    // Test power function
+    pow_result = power(2, 8);  // 2^8 = 256
+    print pow_result;
+    
+    // Test factorial
+    fact_result = factorial(5);  // 5! = 120
+    print fact_result;
+    
+    // Test GCD
+    gcd_result = gcd(48, 18);   // GCD(48, 18) = 6
+    print gcd_result;
+    
+    // Test complex calculation
+    series_result = complex_calculation();
+    print series_result;
+    
+    // Test logical operations
+    var a bool = true;
+    var b bool = false;
+    
+    if a && !b {
+        print 'A';  // Should print
+    }
+    
+    if a || b {
+        print 'B';  // Should print
+    }
+    
+    if !(a && b) {
+        print 'C';  // Should print
+    }
+    
+    return 0;
+}

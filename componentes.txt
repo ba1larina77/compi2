@@ -1,0 +1,11 @@
+// lexer:         Analiza el código fuente y lo convierte en una secuencia de tokens (ej: palabras clave, identificadores, operadores).
+
+// parser:        Toma la secuencia de tokens y construye una estructura jerárquica llamada Árbol de Sintaxis Abstracta (AST) que representa la gramática del código.
+
+// model:         Recorre el AST para construir un modelo semántico, definiendo símbolos (variables, funciones) y sus relaciones (ej: alcance o scope).
+
+// checker:       Analiza el modelo semántico para validar las reglas del lenguaje, principalmente la verificación de tipos para asegurar que las operaciones son válidas.
+
+// ircode:        Traduce el modelo verificado a una Representación Intermedia (IR) de bajo nivel e independiente de la máquina.
+
+// stack_machine: Ejecuta la Representación Intermedia (IR) en una máquina virtual simple que usa una pila para realizar los cálculos.

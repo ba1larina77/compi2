@@ -1,0 +1,13 @@
+{
+  "Debug": false,
+  "GenerateOutputFile": false,
+  "IntSize": 4,
+  "FloatSize": 4,
+  "CharSize": 1,
+  "EnableOptimizations": false,
+  "WarningLevel": 1,
+  "StrictTypeChecking": true,
+  "MaxRecursionDepth": 1000,
+  "OutputDirectory": "./output",
+  "Verbose": false
+}

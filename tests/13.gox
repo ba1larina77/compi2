@@ -1,0 +1,29 @@
+//12. Programa complejo que combina varios elementos
+func fibonacci(n int) int {
+    if n <= 1 {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+func isPrime(num int) bool {
+    if num <= 1 {
+        return false;
+    }
+    var i int = 2;
+    while i * i <= num {
+        if num - (num / i) * i == 0 {
+            return false;
+        }
+        i = i + 1;
+    }
+    return true;
+}
+
+var n int = 11;
+var fib int = fibonacci(n);
+var prime bool = isPrime(fib);
+
+print fib;
+print prime;
+//89, true

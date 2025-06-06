@@ -1,0 +1,8 @@
+//2. Programa con constantes y operaciones con flotantes
+const gravity float = 9.81;
+const time float = 2.5;
+var distance float = 0.5 * gravity * time * time;
+var velocity float = gravity * time;
+
+print distance; //30.65625
+print velocity; //24.525

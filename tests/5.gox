@@ -1,0 +1,14 @@
+//5. Programa con funciones y parámetros
+func add(a int, b int) int {
+    return a + b;
+}
+
+func multiply(x int, y int) int {
+    return x * y;
+}
+
+var result1 int = add(5, 3);
+var result2 int = multiply(4, 6);
+
+print result1;  // Should print 8
+print result2;  // Should print 24

@@ -1,0 +1,6 @@
+//7. Programa con conversiones de tipo (type casting)
+var intValue int = 42;
+var floatValue float = float(intValue);
+var backToInt int = int(floatValue);
+print floatValue;
+print backToInt;
