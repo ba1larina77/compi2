@@ -1,6 +1,6 @@
 
 
-# Nombre del Proyecto (Ej: SimpleCompiler)
+# Nombre del Proyecto (compi mani)
 
 Este proyecto es una implementación de un compilador/intérprete simple que procesa un lenguaje de programación personalizado. El proceso de compilación sigue un flujo de varias etapas, desde el análisis del código fuente hasta la ejecución en una máquina virtual de pila.
 
